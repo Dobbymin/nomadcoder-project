@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Momentum App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <form id="login-form">
+      <input type="text" id="username-input" placeholder="Please enter your username." />
+      <button type="button" id="login-button">Login</button>
+      <button type="button" id="logout-button" class="hidden">Logout</button>
+    </form>
+    <h1 id="greeting">Please login.</h1>
+    <h2 id="clock">
+      00:00:00
+    </h2>
+    <div id="location-weather">
+      <h3 id="location">Loading location...</h3>
+      <h4 id="weather">Loading weather...</h4>
+    </div>
+    <div>
+      <span>
+
+      </span>
+      <span>
+
+      </span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
