@@ -1,0 +1,28 @@
+const todoList = document.getElementById("todo-list");
+const todoInput = document.getElementById("todo-input");
+const todoForm = document.getElementById("todo-form");
+
+todoForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const todo = todoInput.value;
+  if (todo) {
+    const li = document.createElement("li");
+    li.innerHTML = todo;
+    todoList.appendChild(li);
+    todoInput.value = "";
+    saveTodos();
+  }
+});
+
+function saveTodos() {
+  localStorage.setItem("todos", todoList.innerHTML);
+}
+
+function loadTodos() {
+  const todos = localStorage.getItem("todos");
+  if (todos) {
+    todoList.innerHTML = todos;
+  }
+}
+
+loadTodos();
